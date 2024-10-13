@@ -1,5 +1,4 @@
-
-:root{
+:root {
   --color-pink-1: #fff1f7;
   --color-pink-2: #f1b2ce;
   --color-pink-3: #ffc2e6;
@@ -11,20 +10,20 @@
   --color-black-1: #000028;
   --color-black-2: #353430;
 
-  --font-family:"IBM Plex mono", sans-serif;
+  --font-family: "IBM Plex mono", sans-serif;
 
-  --padding:20px;
+  --padding: 20px;
 
-  --background-image:url("../images/cover-image-dark.png");
-  --background-color:var(--color-black-1, #000028);
-  --font-color:var(--color-purple-2,#ff0070);
+  --background-image: url("../images/cover-image-dark.png");
+  --background-color: var(--color-black-1, #000028);
+  --font-color: var(--color-purple-2, #ff0070);
   --border-style: 1px solid #ff0070;
-  --border-style-hover:1px solid rgba(255,0,112,0.4);
-  --title-decor:var(--color-purple-2,#ff0070);
-  --stylish-text-color:var(--color-purple-1,#db00ff);
-  --answer-title-color:var(--color-black-1,#000028);
-  --answer-decription-color:var(--color-pink-2,#f1b2ce);
-  --action-border:var(--color-pink-2,#f1b2ce);
-  --link-shadow:rgba(255,0,111,0.8);
-  --dispaly-rec:block;
+  --border-style-hover: 1px solid rgba(255, 0, 112, 0.4);
+  --title-decor: var(--color-purple-2, #ff0070);
+  --stylish-text-color: var(--color-purple-1, #db00ff);
+  --answer-title-color: var(--color-black-1, #000028);
+  --answer-decription-color: var(--color-pink-2, #f1b2ce);
+  --action-border: var(--color-pink-2, #f1b2ce);
+  --link-shadow: rgba(255, 0, 111, 0.8);
+  --dispaly-rec: block;
 }
