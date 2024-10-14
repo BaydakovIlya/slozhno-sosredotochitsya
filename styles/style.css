@@ -263,7 +263,6 @@
 
 .sunset__image {
   object-fit: cover;
-  block-size: clamp(142px, 192px, 260px);
   block-size: 100%;
   inline-size: 100%;
   grid-column: 1/3;
@@ -326,6 +325,15 @@
   .header {
     min-block-size: 1024px;
   }
+  .first-question__section {
+    min-block-size: 648px;
+    gap: 10px;
+  }
+
+  .third-question__section {
+    margin-block-start: 80px;
+    gap: 10px;
+  }
 
   .header__theme-menu {
     justify-self: end;
@@ -350,6 +358,7 @@
 
   .footer {
     min-block-size: 1024px;
+    margin-block-start: 50px;
   }
 }
 @media (max-width: 745px) {
@@ -444,6 +453,7 @@
   .main {
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+    padding-block-start: 10px;
   }
 
   .card__answer_media {
@@ -453,6 +463,10 @@
   .footer {
     min-block-size: 668px;
     margin-block-start: 40px;
+  }
+  .stylish__text {
+    line-height: 95.7px;
+    font-size: 116px;
   }
   /* Уголок верхний */
   .decorated-zone::before {
