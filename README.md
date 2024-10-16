@@ -8,3 +8,5 @@
 Ссылка на Github:https://github.com/BaydakovIlya/slozhno-sosredotochitsya
 
 Ссылка на Github pages:https://baydakovilya.github.io/slozhno-sosredotochitsya/ 
+
+Ссылка на репозиторий https://github.com/BaydakovIlya/slozhno-sosredotochitsya
