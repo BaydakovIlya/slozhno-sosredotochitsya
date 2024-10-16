@@ -5,8 +5,6 @@
 
 Ссылка на макет:https://clck.ru/3Dut2W
 
-Ссылка на Github:https://github.com/BaydakovIlya/slozhno-sosredotochitsya
+Ссылка на репозиторий https://github.com/BaydakovIlya/slozhno-sosredotochitsya
 
 Ссылка на Github pages:https://baydakovilya.github.io/slozhno-sosredotochitsya/ 
-
-Ссылка на репозиторий https://github.com/BaydakovIlya/slozhno-sosredotochitsya
