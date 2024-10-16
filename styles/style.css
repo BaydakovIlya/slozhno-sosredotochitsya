@@ -13,8 +13,8 @@
 }
 
 .header {
-  min-block-size: 768px;
   padding: var(--padding);
+  min-block-size: 768px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
@@ -73,7 +73,7 @@
   border: none;
 }
 
-.header__theme-menu-button_acrive {
+.header__theme-menu-button_active {
   border: var(--border-style);
   pointer-events: none;
 }
@@ -90,6 +90,7 @@
 
 .header__decoration-rec {
   list-style: none;
+  text-align: center;
   text-transform: uppercase;
   font-size: 16px;
   font-style: normal;
@@ -119,7 +120,7 @@
 }
 
 .page__title {
-  align-items: flex-start;
+  align-self: flex-start;
   margin-inline-start: -20px;
 }
 
@@ -133,22 +134,17 @@
 }
 
 .page__description {
-  align-self: center;
   justify-self: end;
-  font-size: 18px;
-  font-style: normal;
+  align-self: center;
   color: var(--answer-title-color);
-  inline-size: 50%;
+  font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
+inline-size: 50%;
 }
 
 .title-decor {
   background-color: var(--title-decor);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px;
 }
 
 /* Секция с гридами_1 */
@@ -237,7 +233,7 @@
 
 /* Секция с гридами_3 */
 .third-question__section {
-  margin-block-start: 55px;
+  margin-block-start: 80px;
   display: grid;
   grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
   gap: 20px;
@@ -321,18 +317,10 @@
     inline-size: 100%;
   }
 }
+
 @media (max-width: 768px) {
   .header {
     min-block-size: 1024px;
-  }
-  .first-question__section {
-    min-block-size: 648px;
-    gap: 10px;
-  }
-
-  .third-question__section {
-    margin-block-start: 80px;
-    gap: 10px;
   }
 
   .header__theme-menu {
@@ -361,6 +349,7 @@
     margin-block-start: 50px;
   }
 }
+
 @media (max-width: 745px) {
   .first-question__section {
     grid-template-columns: none;
@@ -453,7 +442,6 @@
   .main {
     padding-inline-start: 10px;
     padding-inline-end: 10px;
-    padding-block-start: 10px;
   }
 
   .card__answer_media {
@@ -469,10 +457,11 @@
     font-size: 116px;
   }
   /* Уголок верхний */
-  .decorated-zone::before {
+   .decorated-zone::before {
     bottom: 10px;
     left: 10px;
   }
+
   /* Уголок нижний */
   .decorated-zone::after {
     top: 10px;
@@ -488,4 +477,5 @@
     top: 18px;
     right: 20px;
   }
-}
+} 
+
