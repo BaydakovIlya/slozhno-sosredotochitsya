@@ -25,5 +25,5 @@
   --answer-decription-color: var(--color-pink-2, #f1b2ce);
   --action-border: var(--color-pink-2, #f1b2ce);
   --link-shadow: rgba(255, 0, 111, 0.8);
-  --dispaly-rec: block;
+  --rec-visibility:visible;
 }

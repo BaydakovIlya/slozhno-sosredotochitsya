@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   position: relative;
   font-family: var(--font-family);
@@ -25,6 +23,7 @@
   max-inline-size: 1024px;
 }
 /* уголок верхний */
+
 .decorated-zone::after {
   position: absolute;
   content: "";
@@ -51,7 +50,7 @@
 
 .header__theme-menu-list {
   display: grid;
-  grid-template-columns: repeat(3, 70px);
+  grid-template-columns: repeat(auto-fit, 70px);
   justify-content: center;
   align-items: flex-start;
   list-style: none;
@@ -83,6 +82,10 @@
   border: var(--border-style-hover);
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
 .header__theme-menu-button:focus-visible {
   outline: none;
   border-bottom: var(--border-style);
@@ -99,15 +102,18 @@
 }
 /* REC */
 .marker-rec::before {
-  display: var(--display-rec);
+  visibility: var(--rec-visibility);
   content: "REC";
   position: absolute;
   top: 20px;
   right: 50px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .marker-rec::after {
-  display: var(--display-rec);
+  visibility: var(--rec-visibility);
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -116,7 +122,8 @@
   inline-size: 9px;
   block-size: 9px;
   background-color: var(--font-color);
-  filter: drop-shadow(0px 0px 4px var(--font-color));
+  /* filter: drop-shadow(0px 0px 4px var(--font-color)); */
+  box-shadow: 0 0 2px 2px var(--font-color);
 }
 
 .page__title {
@@ -140,7 +147,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-inline-size: 50%;
+  inline-size: 50%;
 }
 
 .title-decor {
@@ -153,11 +160,15 @@ inline-size: 50%;
   padding-inline-end: var(--padding);
 }
 
-.first-question__section {
-  margin-block-start: 60px;
+.section {
+  margin-block-start: 80px;
   display: grid;
   grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
   gap: 20px;
+}
+
+.why-question__section {
+  margin-block-start: 60px;
 }
 
 .question__title {
@@ -188,7 +199,7 @@ inline-size: 50%;
 
 .link:focus-visible {
   outline: 1px solid var(--action-border);
-  outline-offset: -2px;
+  outline-offset: 1px;
 }
 
 .card__answer {
@@ -213,14 +224,12 @@ inline-size: 50%;
 }
 
 /* Секция с гридами_2 */
-.second-question__section {
-  margin-block-start: 80px;
+.what-question__section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
-.second-question__title {
+.what-question__title {
   justify-self: flex-start;
   inline-size: 30%;
 }
@@ -232,13 +241,15 @@ inline-size: 50%;
 }
 
 /* Секция с гридами_3 */
-.third-question__section {
-  margin-block-start: 80px;
-  display: grid;
-  grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
-  gap: 20px;
+.how-question__section {
 }
 
+.decreased_font {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+}
 /* Секция с картинками */
 .images__section {
   margin-block-start: 80px;
@@ -257,47 +268,38 @@ inline-size: 50%;
   gap: 20px;
 }
 
-.sunset__image {
+.cover {
   object-fit: cover;
   block-size: 100%;
   inline-size: 100%;
+}
+
+.sunset__image {
   grid-column: 1/3;
 }
 
 .ice-cream__image {
-  object-fit: cover;
-  inline-size: 100%;
-  block-size: 100%;
   grid-row: 1/3;
   grid-column: 3/4;
 }
 
 .tape__image {
-  object-fit: cover;
-  inline-size: 100%;
-  block-size: 100%;
   grid-column: 1/2;
   grid-row: 2/4;
 }
 
 .book__image {
-  object-fit: cover;
-  inline-size: 100%;
-  block-size: 100%;
   grid-column: 2;
   grid-row: 2;
 }
 
 .street__image {
-  object-fit: cover;
-  block-size: 100%;
-  inline-size: 100%;
   grid-column: 2/4;
   grid-row: 3/4;
 }
 
 .footer {
-  margin-block-start: 65px;
+  margin-block-start: 60px;
   min-block-size: 768px;
   inline-size: 100%;
   display: flex;
@@ -308,9 +310,7 @@ inline-size: 50%;
 
 @media (max-width: 1000px) {
   .row__answer-container {
-    grid-template-rows: repeat(min-content, 1fr);
     grid-template-columns: none;
-    gap: 20px;
   }
 
   .card__answer_media {
@@ -329,7 +329,7 @@ inline-size: 50%;
   }
 
   .header__theme-menu-list {
-    grid-template-rows: repeat(3, 26px);
+    grid-template-rows: repeat(auto-fit, 26px);
     grid-template-columns: none;
   }
 
@@ -351,16 +351,17 @@ inline-size: 50%;
 }
 
 @media (max-width: 745px) {
-  .first-question__section {
+  .why-question__section {
     grid-template-columns: none;
     grid-template-rows: 47px auto;
   }
 
-  .third-question__section {
+  .how-question__section {
     grid-template-columns: none;
     grid-template-rows: 47px auto;
   }
 }
+
 @media (max-width: 700px) {
   .page__description {
     min-block-size: 117px;
@@ -368,20 +369,21 @@ inline-size: 50%;
     inline-size: 100%;
   }
 }
+
 @media (max-width: 500px) {
-  .first-question__section {
+  .why-question__section {
     margin-block-start: 40px;
   }
 
-  .second-question__section {
+  .what-question__section {
     margin-block-start: 50px;
   }
 
-  .second-question__title {
+  .what-question__title {
     inline-size: 100%;
   }
 
-  .third-question__section {
+  .how-question__section {
     gap: 40px;
   }
 
@@ -457,7 +459,7 @@ inline-size: 50%;
     font-size: 116px;
   }
   /* Уголок верхний */
-   .decorated-zone::before {
+  .decorated-zone::before {
     bottom: 10px;
     left: 10px;
   }
@@ -477,5 +479,4 @@ inline-size: 50%;
     top: 18px;
     right: 20px;
   }
-} 
-
+}

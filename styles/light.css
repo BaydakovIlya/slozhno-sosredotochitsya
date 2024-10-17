@@ -11,7 +11,7 @@
   --answer-decription-color:var(--color-black-2,#353430);
   --action-border:var(--color-black-2,#353430);
   --link-shadow:rgba(255,141,203,1);
-  --display-rec:none;
+  --rec-visibility:hidden;
   --padding:20px;
 }
 
@@ -28,7 +28,7 @@
     --answer-decription-color:var(--color-black-2,#353430);
     --action-border:var(--color-black-2,#353430);
     --link-shadow:rgba(255,141,203,1);
-    --display-rec:none;
+    --rec-visibility:hidden;
     --padding:20px;
   }
 }
